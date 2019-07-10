@@ -7,10 +7,12 @@ function isEachNumberFrom1To1000 (startNumber, endNumber) {
 function isStartNumberSmallerThanEndNumber(startNumber,endNumber){
    return startNumber<=endNumber;
 }
-function printMultiplicationTable(startNumber,endNumber){
+function generateMultiplicationTable(startNumber,endNumber){
     if(isEachNumberFrom1To1000(startNumber,endNumber)&&isStartNumberSmallerThanEndNumber(startNumber,endNumber)){
         let resultString = getMultiplicationTableString(startNumber,endNumber);
-       console.log(resultString) ;
+       return resultString;
+    }else{
+    return null;
     }
 }
 function getMultiplicationTableString(startNumber,endNumber){
@@ -31,6 +33,6 @@ function getEquationString(startMultiplier,endMultiplier){
 //module.exports = [isEachNumberFrom1To1000,isStartNumberSmallerThanEndNumber];
 exports.isEachNumberFrom1To1000 = isEachNumberFrom1To1000
 exports.isStartNumberSmallerThanEndNumber = isStartNumberSmallerThanEndNumber
-exports.printMultiplicationTable=printMultiplicationTable
+exports.generateMultiplicationTable=generateMultiplicationTable
 exports.getMultiplicationTableString=getMultiplicationTableString
 exports.getEquationString=getEquationString
